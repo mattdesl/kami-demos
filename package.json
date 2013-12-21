@@ -1,0 +1,16 @@
+{
+  "name": "kami-demos",
+  "version": "0.0.0",
+  "description": "Demos for the Kami rendering framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt DesLauriers",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "domready": "~0.2.13",
+    "raf.js": "0.0.3",
+    "brfs": "0.0.8"
+  }
+}
