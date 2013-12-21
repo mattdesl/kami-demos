@@ -1,4 +1,4 @@
-## running the demos
+## building the demos
 
 [Install node.js](http://nodejs.org/) and it should come bundled with NPM. Also [see here](http://howtonode.org/introduction-to-npm) to set up owner rights correctly and avoid `sudo`.
 
