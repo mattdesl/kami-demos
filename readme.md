@@ -21,7 +21,7 @@ See the demo folders for more specific instructions.
 
 ## contents
 
-- [basic](demos/basic) - sprite rendering
-- [assets](demos/assets) - asset preloading
-- [shaders](demos/shaders) - including GLSL source in your game
-- [shockwave](demos/shockwave) - a shockwave shader example, using post-processing
+- [basic](basic) - sprite rendering
+- [assets](assets) - asset preloading
+- [shaders](shaders) - including GLSL source in your game
+- [shockwave](shockwave) - a shockwave shader example, using post-processing
