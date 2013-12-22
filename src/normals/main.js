@@ -69,6 +69,7 @@ domready(function() {
             [0, 0, lightZ,
              0, 0, lightZ]);
 
+
     var mouseX = 0, 
         mouseY = 0
         scroll = 0,
