@@ -4,11 +4,15 @@
 - [assets](src/assets) - asset preloading
 - [shaders](src/shaders) - including GLSL source in your game
 - [shockwave](src/shockwave) - a shockwave shader example, using post-processing
+- [normals](src/normals) - a more advanced normal-mapping shader for 2D graphics
 
 ## view the demos
 
-- [normals](http://mattdesl.github.io/kami-demos/release/normals.html)
+- [basic](http://mattdesl.github.io/kami-demos/release/basic.html)
+- [assets](http://mattdesl.github.io/kami-demos/release/assets.html)
+- [shaders](http://mattdesl.github.io/kami-demos/release/shaders-brfs.html)
 - [shockwave](http://mattdesl.github.io/kami-demos/release/shockwave.html)
+- [normals](http://mattdesl.github.io/kami-demos/release/normals.html)
 
 ## modifying & building the demos
 
