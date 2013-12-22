@@ -1,12 +1,7 @@
-<!-- 
-	This is an example of using <script> tags to include GLSL source code.
- -->
-
-<!DOCTYPE HTML>
-<html>
-<head>
-
-	<title>kami examples</title>
+	<!-- 
+		This is an example of using <script> tags to include GLSL source code.
+		In a typical case you might include it in the <head> of your HTML page.
+	 -->
 
 	<script id="frag_shader" type="x-shader/x-fragment">
 	#ifdef GL_ES
@@ -52,7 +47,7 @@
 
 			dir.x += ((mouse.x*2.0-1.0)+1.0)*float(2-i);
 			dir.y += ((mouse.y*2.0-1.0)-1.0)*float(2-i);
-			
+			 
 			p.x -= 0.02;
 			
 			//normalized spotlight vector
@@ -85,20 +80,10 @@
 	uniform vec2 u_projection;
 	varying vec2 vTexCoord0;
 	varying vec4 vColor;
-	
+
 	void main(void) {
 	   gl_Position = vec4( Position.x / u_projection.x - 1.0, Position.y / -u_projection.y + 1.0 , 0.0, 1.0);
 	   vTexCoord0 = TexCoord0;
 	   vColor = Color;
 	} 
 	</script>
-    
-    <script src="/-/live-reload.js"></script>
-
-	<!-- The source file. -->
-	<script src="main.js" type="text/javascript"></script>
-</head>
-
-<body>
-</body>
-</html> 

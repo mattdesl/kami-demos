@@ -11,6 +11,8 @@
   "devDependencies": {
     "domready": "~0.2.13",
     "raf.js": "0.0.3",
-    "brfs": "0.0.8"
+    "brfs": "0.0.8",
+    "browserify": "~3.13.0",
+    "underscore": "~1.5.2"
   }
 }

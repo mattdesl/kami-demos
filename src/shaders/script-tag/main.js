@@ -8,4 +8,4 @@ domready(function() {
 
     //run the base example
     base(vert, frag);
-});
+}); 

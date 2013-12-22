@@ -1,27 +1,25 @@
-## building the demos
+## browse source code
 
-[Install node.js](http://nodejs.org/) and it should come bundled with NPM. Also [see here](http://howtonode.org/introduction-to-npm) to set up owner rights correctly and avoid `sudo`.
+- [basic](src/basic) - sprite rendering
+- [assets](src/assets) - asset preloading
+- [shaders](src/shaders) - including GLSL source in your game
+- [shockwave](src/shockwave) - a shockwave shader example, using post-processing
 
-Before you run the demos, you need the following global tools. These only need to be installed once:
+## running the demos
+
+
+
+## modifying & building the demos
+
+[Install node.js](http://nodejs.org/), it should come bundled with NPM. Then `cd` to this directory and run the following:
 
 ```
-npm install beefy -g
-npm install browserify -g
+npm install
+npm build.js
 ```
 
-To run the demos, cd to this directory (`kami-demos`) and run the following:
+This will write the compiled HTML and JS files to the `release` folder. Then you should serve up the `release` folder and browse it on your localhost. To watch the source folder for changes, you can use nodemon and the following command:
 
 ```
-beefy main.js --cwd path/to/demo --live
+nodemon --watch src -e js,html,vert,frag build.js
 ```
-
-Then open [http://localhost:9966/](http://localhost:9966/) in your favourite browser. You can download the [Live Reload](http://feedback.livereload.com/knowledgebase/articles/86242-how-do-i-install-and-use-the-browser-extensions-) plugins if you want the demos to be able to reload the browser page when you modify them.
-
-See the demo folders for more specific instructions.
-
-## contents
-
-- [basic](basic) - sprite rendering
-- [assets](assets) - asset preloading
-- [shaders](shaders) - including GLSL source in your game
-- [shockwave](shockwave) - a shockwave shader example, using post-processing

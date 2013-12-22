@@ -3,7 +3,6 @@ var domready = require('domready');
 var WebGLContext = require('kami').WebGLContext;
 var Texture = require('kami').Texture;
 
-var AssetManager = require('kami').AssetManager;
 var SpriteBatch = require('kami').SpriteBatch;
 var FrameBuffer = require('kami').FrameBuffer;
 var TextureRegion = require('kami').TextureRegion;
@@ -31,9 +30,16 @@ domready(function() {
     canvas.width = width;
     canvas.height = height;
     
-    document.body.style.margin = "0";
-    document.body.style.background = 'gray';
     document.body.appendChild(canvas);
+
+    var text = document.createElement("span");
+    text.style.font = "Verdana 18px";
+    text.style.color = "#000";
+    text.style.position = "absolute";
+    text.style.top = (height+10)+"px";
+    text.style.left = "5px";
+    text.innerHTML = "Click on the canvas to see the explosion effect"
+    document.body.appendChild(text);
 
     //create our WebGL context
     var context = new WebGLContext(width, height, canvas);

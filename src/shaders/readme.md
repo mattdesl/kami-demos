@@ -1,14 +1,8 @@
 # shaders
 
-Here we demonstrate two different ways of including GLSL source code into your app, and using a custom shader with SpriteBatch and Kami. 
+Here we demonstrate a couple different ways of including GLSL source code into your app, and using a custom shader with SpriteBatch and Kami. 
 
 ## script-tag
-
-To run this demo, `cd` to the root `kami-demos` folder and run:
-
-```
-beefy main.js --cwd shaders/script-tag --live
-```
 
 This approach uses a `<script>` tag to hold the content of the vertex and fragment shaders:
 
@@ -30,10 +24,6 @@ fragSource = $("#frag_shader").html();
 ## brfs
 
 This approach uses a browserify transform to decouple the GLSL source from your HTML/JS source. The GLSL is inlined into your JS files during build-time, so there is no extra overhead. Make sure you include the brfs transform when running the demo:
-
-```
-beefy main.js --cwd shaders/brfs --live -- -t brfs
-```
 
 From your app, the code looks like this:
 
