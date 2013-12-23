@@ -14,6 +14,7 @@ var fs = require('fs');
 //include polyfill for requestAnimationFrame
 require('raf.js');
 
+//Browserify rocks! We can inline our GLSL like so: (brfs transform)
 var vert = fs.readFileSync( __dirname + "/lighting.vert" );
 var frag = fs.readFileSync( __dirname + "/lighting.frag" );
 
@@ -31,7 +32,6 @@ domready(function() {
     //Create a new WebGL canvas with the given size
     var context = new WebGLContext(1024, 1024);
 
-    // context.view.style.background = "gray";
     //the 'view' is the DOM canvas, so we can just append it to our body
     document.body.appendChild( context.view );
     document.body.style.overflow = "hidden";
@@ -136,6 +136,7 @@ domready(function() {
         lightPos[0] = mouseX;
         lightPos[1] = mouseY;
 
+        //adjust the falloff a bit...
         falloff[2] = 30 - (Math.sin(time)/2+0.5)*15;
 
         //pass our parameters to the shader
@@ -185,6 +186,7 @@ domready(function() {
         //set the batch to the screen size
         batch.resize(context.width, context.height);
 
+        //now we just draw it to the screen, upscaled
         batch.begin();
         batch.drawRegion(fboRegion, 0, 0, fbo.width * UPSCALE, fbo.height * UPSCALE)
         batch.end();
