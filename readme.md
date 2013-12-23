@@ -1,8 +1,10 @@
-## kami demos
+## about
 
-Here is a collection of demos for Kami, a minimal WebGL 2D framework.
+[kami](https://github.com/mattdesl/kami) is a minimal 2D framework built on WebGL. It supports some essential GL utilities, and a highly optimized sprite batcher. The library is still in heavy development. 
 
-## the demos
+## demos
+
+Below are some demos and tests for kami.
 
 - [normals](http://mattdesl.github.io/kami-demos/release/normals.html) - normal-mapped 2D images
 - [normals-pixel](http://mattdesl.github.io/kami-demos/release/normals-pixel.html) - retro graphics with normal maps

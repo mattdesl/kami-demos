@@ -76,6 +76,9 @@ domready(function() {
         time   = 0;
 
     window.addEventListener("mousemove", function(ev) {
+        if (!fbo)
+            return;
+
         //Since we flipped the FBO region, we need to accomodate for that.
         //We also need to adjust for the amount we are scaling the FBO
         //This is because we use gl_FragCoord in the shader
@@ -84,6 +87,7 @@ domready(function() {
 
         mouseX = ev.pageX / w;
         mouseY = (h - ev.pageY) / h;
+        
     }, true);
 
     window.addEventListener("resize", function(ev) {
