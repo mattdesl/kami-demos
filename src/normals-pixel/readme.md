@@ -1,6 +1,6 @@
 # normals-pixel
 
-This is very similar to the [normals](../normals) tutorial, but styled for pixel art. 
+This is very similar to the [normals](../normals) demo, but styled for pixel art. 
 
 There are two main considerations. The first is to use a "cel shading" for the light, so that it does not look like a smooth gradient. One simple way of achieving this is to use a series of if-else statements and clamp the color. See the [Toon Shading section here](http://prideout.net/blog/?p=22). 
 
