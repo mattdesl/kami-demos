@@ -111,27 +111,27 @@ domready(function() {
         var texWidth = texDiffuse.width,
             texHeight = texDiffuse.height;
 
-        // animate the camera by scrolling UV offsets
+        //here we animate the light falloff a bit
         time += 0.25 * delta;
+        falloff[2] = 30 - (Math.sin(time)/2+0.5)*15;
         
-        //we need to set the shader of our batch...
-        batch.shader = shader;
-
-        //We need to resize the batch to the size of the screen, in this case a FBO!
-        batch.resize(buffer.width, buffer.height);
-
-        //draw our image to the size of the canvas
-        //this will bind our shader
-        batch.begin();
-
         //the first light will be based on mouse
         lightPos[0] = mouse.x;
         lightPos[1] = mouse.y;
 
-        //adjust the falloff a bit...
-        falloff[2] = 30 - (Math.sin(time)/2+0.5)*15;
+        //we need to set the shader of our batch...
+        batch.shader = shader;
 
-        //pass our parameters to the shader
+        //We need to resize the batch to the size of the buffer we are drawing to,
+        //in this case our FBO
+        batch.resize(buffer.width, buffer.height);
+
+        //Now we need to draw our sprites with the lighting shader.
+        
+        //this will bind our shader
+        batch.begin();
+
+        //pass our parameters to the shader. glUniform has to be called after the shader is bound!
         //Notice the resolution and light position are normalized to the WebGL canvas size
         shader.setUniformf("Resolution", fbo.width, fbo.height);
         shader.setUniformfv("AmbientColor", ambientColor);
@@ -143,7 +143,7 @@ domready(function() {
         texDiffuse.bind(0); //bind diffuse to unit 0
 
         //Draw each sprite here...
-        //You can use sprite sheets as long as diffuse & normals match
+        //You can use sprite sheets as long as diffuse & normal regions match
         batch.draw(texDiffuse, 0, 0, texWidth, texHeight);
 
         batch.end(); 
@@ -162,6 +162,7 @@ domready(function() {
         //First, clear the main buffer (the screen)
         gl.clear(gl.COLOR_BUFFER_BIT);
 
+        //start rendering to our FBO
         fbo.begin();
 
         //Now we need to clear the off-screen buffer!
@@ -170,6 +171,7 @@ domready(function() {
         //draw the scene to our buffer
         drawScene(delta, fbo);
 
+        //stop rendering to FBO, and make the screen the main buffer
         fbo.end();
 
         //reset to default shader
