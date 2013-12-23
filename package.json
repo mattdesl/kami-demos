@@ -14,5 +14,9 @@
     "brfs": "0.0.8",
     "browserify": "~3.13.0",
     "underscore": "~1.5.2"
+  },
+  "dependencies": {
+    "kami": "git://github.com/mattdesl/kami",
+    "kami-assets": "git://github.com/mattdesl/kami-assets"
   }
 }
