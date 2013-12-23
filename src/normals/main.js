@@ -21,6 +21,7 @@ function addCredits() {
     document.body.appendChild(text);
 }
 
+
 domready(function() {
     //Create a new WebGL canvas with the given size
     var context = new WebGLContext(window.innerWidth, window.innerHeight);
@@ -72,14 +73,13 @@ domready(function() {
              0, 0, lightZ]);
 
 
-    var mouseX = 0, 
-        mouseY = 0
+    var mouse = {x:0, y:0},
         scroll = 0,
         time   = 0;
-
+    
     window.addEventListener("mousemove", function(ev) {
-        mouseX = ev.pageX / context.width;
-        mouseY = 1.0 - ev.pageY / context.height;
+        mouse.x = ev.pageX / context.width;
+        mouse.y = 1.0 - ev.pageY / context.height;
     }, true);
 
     window.addEventListener("resize", function(ev) {
@@ -115,8 +115,6 @@ domready(function() {
             ypos = -yrepeats + Math.sin(time*0.25);
 
 
-
-
         //get the GL rendering context
         var gl = context.gl;
 
@@ -134,8 +132,8 @@ domready(function() {
         batch.begin();
 
         //the first light will be based on mouse
-        lightPos[0] = mouseX;
-        lightPos[1] = mouseY;
+        lightPos[0] = mouse.x;
+        lightPos[1] = mouse.y;
 
         //the second light we'll just move around a bit
         lightPos[3] = (Math.sin(time*0.25) / 2.0 + 0.5);

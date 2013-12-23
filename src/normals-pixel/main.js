@@ -63,8 +63,7 @@ domready(function() {
 
     var fbo = null,
         fboRegion = null,
-        mouseX = 0, 
-        mouseY = -1, //make the light start off-screen
+        mouse = {x:0, y: -1}, //start the light off-screen...
         scroll = 0,
         time   = 0;
 
@@ -78,8 +77,8 @@ domready(function() {
         var w = fbo.width * UPSCALE;
         var h = fbo.height * UPSCALE;
 
-        mouseX = ev.pageX / w;
-        mouseY = (h - ev.pageY) / h;
+        mouse.x = ev.pageX / w;
+        mouse.y = (h - ev.pageY) / h;
         
     }, true);
 
@@ -126,8 +125,8 @@ domready(function() {
         batch.begin();
 
         //the first light will be based on mouse
-        lightPos[0] = mouseX;
-        lightPos[1] = mouseY;
+        lightPos[0] = mouse.x;
+        lightPos[1] = mouse.y;
 
         //adjust the falloff a bit...
         falloff[2] = 30 - (Math.sin(time)/2+0.5)*15;
