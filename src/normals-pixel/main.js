@@ -18,7 +18,7 @@ require('raf.js');
 var vert = fs.readFileSync( __dirname + "/lighting.vert" );
 var frag = fs.readFileSync( __dirname + "/lighting.frag" );
 
-function addCredits() { //.. should include this in the HTML template
+function addCredits() { //.. I should probably include this in the HTML template
     var text = document.createElement("div");
     text.className = "credits";
     text.innerHTML = '<div><a href="https://github.com/mattdesl/kami-demos">kami-demos</a></div>'
