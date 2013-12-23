@@ -8,6 +8,7 @@ Below are some demos and tests for kami.
 
 - [normals](http://mattdesl.github.io/kami-demos/release/normals.html) - normal-mapped 2D images
 - [normals-pixel](http://mattdesl.github.io/kami-demos/release/normals-pixel.html) - retro graphics with normal maps
+- [s3tc](http://mattdesl.github.io/kami-demos/release/s3tc.html) - demo showing compressed textures (DDS, CRN) and TGA
 - [basic](http://mattdesl.github.io/kami-demos/release/basic.html) - sprite rendering
 - [assets](http://mattdesl.github.io/kami-demos/release/assets.html) - asset preloading
 - [shaders](http://mattdesl.github.io/kami-demos/release/shaders-brfs.html) - some approaches to including GLSL code
