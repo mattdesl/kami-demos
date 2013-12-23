@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "kami": "git://github.com/mattdesl/kami",
-    "kami-assets": "git://github.com/mattdesl/kami-assets"
+    "kami-assets": "git://github.com/mattdesl/kami-assets",
+    "klasse": "~1.0.4"
   }
 }
