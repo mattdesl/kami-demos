@@ -15,7 +15,9 @@ var frag = fs.readFileSync( __dirname + "/lighting.frag" );
 function addCredits() {
     var text = document.createElement("div");
     text.className = "credits";
-    text.innerHTML = 'brick wall texture and normal map by <a href="http://opengameart.org/content/brick-wall">JosipKladaric</a>';
+    text.innerHTML = 
+                '<div><a href="https://github.com/mattdesl/kami-demos">kami-demos</a></div>'
+                + 'brick wall texture and normal map by <a href="http://opengameart.org/content/brick-wall">JosipKladaric</a>';
     document.body.appendChild(text);
 }
 

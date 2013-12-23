@@ -1,18 +1,19 @@
+## kami demos
+
+Here is a collection of demos for Kami, a minimal WebGL 2D framework.
+
+## the demos
+
+- [normals](http://mattdesl.github.io/kami-demos/release/normals.html) - normal-mapped 2D images
+- [normals-pixel](http://mattdesl.github.io/kami-demos/release/normals-pixel.html) - retro graphics with normal maps
+- [basic](http://mattdesl.github.io/kami-demos/release/basic.html) - sprite rendering
+- [assets](http://mattdesl.github.io/kami-demos/release/assets.html) - asset preloading
+- [shaders](http://mattdesl.github.io/kami-demos/release/shaders-brfs.html) - some approaches to including GLSL code
+- [shockwave](http://mattdesl.github.io/kami-demos/release/shockwave.html) - a shockwave shader example, using post-processing
+
 ## browse source code
 
-- [basic](src/basic) - sprite rendering
-- [assets](src/assets) - asset preloading
-- [shaders](src/shaders) - including GLSL source in your game
-- [shockwave](src/shockwave) - a shockwave shader example, using post-processing
-- [normals](src/normals) - a more advanced normal-mapping shader for 2D graphics
-
-## view the demos
-
-- [basic](http://mattdesl.github.io/kami-demos/release/basic.html)
-- [assets](http://mattdesl.github.io/kami-demos/release/assets.html)
-- [shaders](http://mattdesl.github.io/kami-demos/release/shaders-brfs.html)
-- [shockwave](http://mattdesl.github.io/kami-demos/release/shockwave.html)
-- [normals](http://mattdesl.github.io/kami-demos/release/normals.html)
+See the [src](src/) folder for the code.
 
 ## modifying & building the demos
 

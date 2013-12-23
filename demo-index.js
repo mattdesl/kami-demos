@@ -2,10 +2,8 @@
 
 module.exports = [
     { name: 'basic', path: './src/basic/main.js' },
-    { name: 'normals', path: './src/normals/main.js', 
-        transform: 'brfs', scripts: './src/normals/fonts.html' },
-    { name: 'normals-pixel', path: './src/normals-pixel/main.js', 
-        transform: 'brfs', scripts: './src/normals-pixel/fonts.html' },
+    { name: 'normals', path: './src/normals/main.js', transform: 'brfs' },
+    { name: 'normals-pixel', path: './src/normals-pixel/main.js', transform: 'brfs' },
     { name: 'assets', path: './src/assets/main.js' },
 	{ name: 'shockwave', path: './src/shockwave/main.js', transform: 'brfs' },
     { name: 'shaders-brfs', path: './src/shaders/brfs/main.js', transform: 'brfs' },

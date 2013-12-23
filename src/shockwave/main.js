@@ -33,8 +33,6 @@ domready(function() {
     document.body.appendChild(canvas);
 
     var text = document.createElement("span");
-    text.style.font = "Verdana 18px";
-    text.style.color = "#000";
     text.style.position = "absolute";
     text.style.top = (height+10)+"px";
     text.style.left = "5px";
