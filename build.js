@@ -12,6 +12,7 @@ var defaults = {
     scripts: '',
 };
 
+
 demoList.forEach(function(demo) {
     if (!demo.path || !demo.name) {
         console.warn("No name/path spcified:", demo);
