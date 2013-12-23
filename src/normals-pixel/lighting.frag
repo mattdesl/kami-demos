@@ -80,6 +80,5 @@ void main() {
 	vec3 Intensity = Ambient + Diffuse * Attenuation;
 	vec3 FinalColor = DiffuseColor.rgb * Intensity;
 
-	// gl_FragColor = vec4(vec3(LightDir.x), 1.0);
 	gl_FragColor = vColor * vec4(FinalColor, DiffuseColor.a);
 }
