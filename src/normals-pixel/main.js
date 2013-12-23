@@ -18,13 +18,6 @@ require('raf.js');
 var vert = fs.readFileSync( __dirname + "/lighting.vert" );
 var frag = fs.readFileSync( __dirname + "/lighting.frag" );
 
-function addCredits() { //.. I should probably include this in the HTML template
-    var text = document.createElement("div");
-    text.className = "credits";
-    text.innerHTML = '<div><a href="https://github.com/mattdesl/kami-demos">kami-demos</a></div>'
-                +'platformer art by <a href="http://opengameart.org/content/platformer-art-pixel-edition">Kenney</a>';
-    document.body.appendChild(text);
-}
 
 var UPSCALE = 3;
 
@@ -98,16 +91,16 @@ domready(function() {
         now = Date.now();
 
 
-
+    //Creates the FBO texture and starts the render loop
     function start() {
-        //We render our scene to a small buffer, and then up-scale it with nearest-neighbour
-        //scaling. This should be faster since we aren't processing as many fragments with our
-        //lighting shader.
+        //To get crisp edges on sprites and the lights, we render our scene to a small buffer, 
+        //and then up-scale it with nearest-neighbour scaling. This should be faster since we 
+        //aren't processing as many fragments with our lighting shader.
         
         //We need to wait until the texture is loaded to determine its size.
         fbo = new FrameBuffer(context, texDiffuse.width, texDiffuse.height)
         
-        //We now use a region to flip the texture coordinates, so it appears at top-left like normal
+        //We now use a region to flip the texture coordinates, so it appears upright like normal
         fboRegion = new TextureRegion(fbo.texture);
         fboRegion.flip(false, true);
 
@@ -193,3 +186,11 @@ domready(function() {
     }
 
 });
+
+function addCredits() { //.. I should probably include this in the HTML template
+    var text = document.createElement("div");
+    text.className = "credits";
+    text.innerHTML = '<div><a href="https://github.com/mattdesl/kami-demos">kami-demos</a></div>'
+                +'platformer art by <a href="http://opengameart.org/content/platformer-art-pixel-edition">Kenney</a>';
+    document.body.appendChild(text);
+}
