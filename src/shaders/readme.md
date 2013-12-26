@@ -23,7 +23,7 @@ fragSource = $("#frag_shader").html();
 
 ## brfs
 
-This approach uses a browserify transform to decouple the GLSL source from your HTML/JS source. The GLSL is inlined into your JS files during build-time, so there is no extra overhead. Make sure you include the brfs transform when running the demo:
+This approach uses a browserify transform to decouple the GLSL source from your HTML/JS source. The GLSL is inlined into your JS files during build-time, so there is no extra overhead. You'll need to include a `brfs` transform in your Grunt or build process.
 
 From your app, the code looks like this:
 
