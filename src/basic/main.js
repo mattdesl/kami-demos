@@ -29,8 +29,13 @@ domready(function() {
         //clear the context
         gl.clear(gl.COLOR_BUFFER_BIT);
 
-        //draw our image to the size of the canvas
+        //To draw sprites, we use a batcher. 
         batch.begin();
+
+        //We can set RGB[A] colors for each sprite like so:
+        //(always in floats, for GL compatibility)
+        batch.setColor(1.0, 0.0, 0.0);
+
         batch.draw(texture, 0, 0, context.width, context.height);
         batch.end(); 
     }
