@@ -2,8 +2,8 @@ var Texture = require('kami').Texture;
 var Class = require('klasse');
 
 var CompressedTexture = new Class({
-	
-	Extends: Texture,
+    
+    Extends: Texture,
 
     /**
      * Loads a new compressed texture asynchronously. This uses webgl-texture-utils
@@ -19,7 +19,7 @@ var CompressedTexture = new Class({
      * @param  {Function} success         the callback to be called on success
      * @param  {String}   format          the format, TGA, DDS or CRN
      */
-	initialize: function CompressedTexture(context, path, success, format) {
+    initialize: function CompressedTexture(context, path, success, format) {
         //Pass the arguments object directly. This way, if no arguments are 
         //received here, then Texture will also receive a zero-length array of arguments.
         Texture.apply(this, arguments); 
