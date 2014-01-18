@@ -13,6 +13,7 @@ Below are some demos and tests for kami.
 - [assets](http://mattdesl.github.io/kami-demos/release/assets.html) - asset preloading
 - [shaders](http://mattdesl.github.io/kami-demos/release/shaders-brfs.html) - some approaches to including GLSL code
 - [shockwave](http://mattdesl.github.io/kami-demos/release/shockwave.html) - a shockwave shader example, using post-processing
+- [blend](http://mattdesl.github.io/kami-demos/release/blend.html) - an example of programmable blending, by ping-ponging between two FBOs
 
 ## browse source code
 
