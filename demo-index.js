@@ -6,6 +6,7 @@ module.exports = [
     { name: 'normals-pixel', path: './src/normals-pixel/main.js', transform: 'brfs' },
     { name: 'assets', path: './src/assets/main.js' },
 	{ name: 'shockwave', path: './src/shockwave/main.js', transform: 'brfs' },
+    { name: 'blend', path: './src/blend/main.js', transform: 'brfs' },
     { name: 'shaders-brfs', path: './src/shaders/brfs/main.js', transform: 'brfs' },
     { name: 's3tc', 
         path: './src/s3tc/main.js',
