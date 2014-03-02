@@ -16,9 +16,9 @@
     "underscore": "~1.5.2"
   },
   "dependencies": {
-    "kami": "git://github.com/mattdesl/kami",
-    "kami-assets": "git://github.com/mattdesl/kami-assets",
-    "klasse": "~1.0.4"
+    "klasse": "~1.0.6",
+    "kami": "~0.2.2",
+    "kami-assets": "0.0.3"
   },
   "repository": {
     "type": "git",
