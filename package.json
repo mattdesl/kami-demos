@@ -22,9 +22,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mattdesl/kami"
+    "url": "https://github.com/mattdesl/kami-demos"
   },
   "bugs": {
-    "url": "https://github.com/mattdesl/kami/issues"
+    "url": "https://github.com/mattdesl/kami-demos/issues"
   }
 }
