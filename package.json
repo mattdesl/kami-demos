@@ -1,6 +1,6 @@
 {
   "name": "kami-demos",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Demos for the Kami rendering framework",
   "main": "index.js",
   "scripts": {
