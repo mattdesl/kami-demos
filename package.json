@@ -18,7 +18,7 @@
   "dependencies": {
     "klasse": "~1.0.6",
     "kami-assets": "0.0.3",
-    "kami": "~0.3.0"
+    "kami": "~0.5.2"
   },
   "repository": {
     "type": "git",
